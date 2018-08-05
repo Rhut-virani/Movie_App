@@ -1,0 +1,12 @@
+$brand-color: #1a1a1a;
+
+body, .nav-color, .home-nav-color{
+    background-color: $brand-color;
+}
+.navbar-fixed{
+    width: inherit;
+}
+.home-nav-color{
+    @extend .navbar-fixed;
+    padding : 0 0 5% 0;
+}

@@ -1,7 +1,6 @@
 html{
     font-size: 1rem;
     font-family: 'Raleway', sans-serif;
-
 }
 body{
     background-color: #1a1a1a;
@@ -10,7 +9,6 @@ body{
 .cont-wrp{
     background: url("/img/bg.jpg") top center/cover no-repeat;
     padding: 2% 5% 5% 5%;
-
 }
 
 .half_search{
@@ -25,7 +23,6 @@ body{
     padding  : 10%;
     left: 50%;
     transform: translateX(-50%);
-    
 }
 .nav-color, .home-nav-color{
 
@@ -46,6 +43,14 @@ body{
 
 .card{
     background-color:#062f4f;
+}
+
+#z-index{
+    z-index: 1 !important;
+}
+#trailer{
+    height: 100% !important;
+    padding-bottom: 0% !important;
 }
 
 

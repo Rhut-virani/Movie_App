@@ -40,7 +40,7 @@
                         </div>
                     </nav> 
                 </div>
-                <div class="parallax"><img src="https://image.tmdb.org/t/p/w1280<%= movies.backdrop_path %>" alt="Image not found" onerror="this.onerror=null;this.src='/img/altbg.jpg';"></div>
+                <div class="parallax"><img src="https://image.tmdb.org/t/p/w1280<%= posters.backdrops[0].file_path %>" alt="Image not found" onerror="this.onerror=null;this.src='/img/altbg.jpg';"></div>
             </div>
             <div class="section white">
                 <div class="row container">
@@ -59,6 +59,47 @@
                         <h5 class="bld">Runtime:</h5> <p><%= movies.runtime %> minutes</p>
                 </div>
             </div>
+            <div class="parallax-container">
+                <div class="parallax">
+                      <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= trailers.results[0].key %>?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+                      </div>
+            </div>
+            <div class="section white">
+                <div class="row container">
+                    <h2 class="header center-align">Cast</h2>
+                     <div class="carousel">
+                            <a class="carousel-item" href="https://www.themoviedb.org/person/<%= credits.cast[0].id %>" target="blank"><img src="http://image.tmdb.org/t/p/h632/<%= credits.cast[0].profile_path %>"></a>
+                            <a class="carousel-item" href="https://www.themoviedb.org/person/<%= credits.cast[1].id %>" target="blank"><img src="http://image.tmdb.org/t/p/h632/<%= credits.cast[1].profile_path %>"></a>
+                            <a class="carousel-item" href="https://www.themoviedb.org/person/<%= credits.cast[2].id %>" target="blank"><img src="http://image.tmdb.org/t/p/h632/<%= credits.cast[2].profile_path %>"></a>
+                            <a class="carousel-item" href="https://www.themoviedb.org/person/<%= credits.cast[3].id %>" target="blank"><img src="http://image.tmdb.org/t/p/h632/<%= credits.cast[3].profile_path %>"></a>
+                            <a class="carousel-item" href="https://www.themoviedb.org/person/<%= credits.cast[4].id %>" target="blank"><img src="http://image.tmdb.org/t/p/h632/<%= credits.cast[4].profile_path %>"></a>
+                            <a class="carousel-item" href="https://www.themoviedb.org/person/<%= credits.cast[5].id %>" target="blank"><img src="http://image.tmdb.org/t/p/h632/<%= credits.cast[5].profile_path %>"></a>
+                            <a class="carousel-item" href="https://www.themoviedb.org/person/<%= credits.cast[6].id %>" target="blank"><img src="http://image.tmdb.org/t/p/h632/<%= credits.cast[6].profile_path %>"></a>
+                            <a class="carousel-item" href="https://www.themoviedb.org/person/<%= credits.cast[7].id %>" target="blank"><img src="http://image.tmdb.org/t/p/h632/<%= credits.cast[7].profile_path %>"></a>
+                            <a class="carousel-item" href="https://www.themoviedb.org/person/<%= credits.cast[8].id %>" target="blank"><img src="http://image.tmdb.org/t/p/h632/<%= credits.cast[8].profile_path %>"></a>
+                            <a class="carousel-item" href="https://www.themoviedb.org/person/<%= credits.cast[9].id %>" target="blank"><img src="http://image.tmdb.org/t/p/h632/<%= credits.cast[9].profile_path %>"></a>
+                            <a class="carousel-item" href="https://www.themoviedb.org/person/<%= credits.cast[10].id %>" target="blank"><img src="http://image.tmdb.org/t/p/h632/<%= credits.cast[10].profile_path %>"></a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="parallax-container">
+                <div class="parallax"><img src="https://image.tmdb.org/t/p/w1280<%= posters.backdrops[1].file_path %>" alt="Image not found" onerror="this.onerror=null;this.src='/img/altbg.jpg';"></div>
+            </div>
+                        <div class="section white">
+                <div class="row container">
+                    <h2 class="header center-align"><%= movies.title %></h2>
+                        <h5 class="bld">Budget:</h5> <p><%= movies.budget %></p>
+                        <h5 class="bld">Box-Office Collection:</h5> <p><%= movies.revenue %></p>
+                        <h5 class="bld">Production Companies</h5>
+                        <p>
+                        <% for (let i = 0; i < movies.production_companies.length; i++) { %>
+                                        <%= movies.production_companies[i].name %> ,    
+                                    <% }; %>
+                        </p>
+                </div>
+            </div>
             <script
                 src="https://code.jquery.com/jquery-3.3.1.min.js"
                 integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -67,6 +108,9 @@
             <script>  $(document).ready(function(){
                     $('.parallax').parallax();
             });
-  </script>
+            </script>
+            <script>  $(document).ready(function(){
+                $('.carousel').carousel();
+                });</script>
 </body>
 </html>

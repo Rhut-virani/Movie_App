@@ -1,0 +1,51 @@
+html{
+    font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
+
+}
+body{
+    background-color: #1a1a1a;
+}
+
+.cont-wrp{
+    background: url("/img/bg.jpg") top center/cover no-repeat;
+    padding: 2% 5% 5% 5%;
+
+}
+
+.half_search{
+    position: relative;
+    max-width: 70%;
+    margin: 2% auto;
+}
+.cd{
+    max-width:12rem;
+    height: 18rem;
+    overflow: hidden;
+    padding  : 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+.nav-color, .home-nav-color{
+
+    background-color: #1a1a1a;
+}
+
+.p-hgt{
+    margin: 10% 0;
+    font-size: 3em; 
+}
+.navbar-fixed{
+    width: inherit;
+}
+.home-nav-color{
+    padding : 0 0 5% 0;
+    width: inherit;
+}
+
+.card{
+    background-color:#062f4f;
+}
+
+
